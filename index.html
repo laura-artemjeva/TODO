@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html><head>
+	<meta charset="UTF-8">
+	<title>TODO</title>
+	<link rel="stylesheet" href="style.css">
+	<link href="https://fonts.googleapis.com/css?family=Raleway:100&amp;subset=latin-ext" rel="stylesheet">
+</head><body>
+
+
+<section>
+	<h1>todos</h1>
+	<div class="page">
+		<div class="title">
+			<div class="caret"></div>
+			<span>What needs to be done?</span>
+		</div>
+		<ul>
+			<li>
+				<a href="#" class="check"></a>
+				<span>Buy milk</span>
+				<a href="#" class="del"></a>
+			</li>
+			<li class="done">
+				<a href="#" class="check"></a>
+				<span>Prepare the report</span>
+				<a href="#" class="del"></a>
+			</li>
+			<li>
+				<a href="#" class="check"></a>
+				<span>Call Mr. Smyth</span>
+				<a href="#" class="del"></a>
+			</li>
+			<li class="add">
+				<input type="text" value="Pick up dress from the dry cleaner">
+			</li>
+		</ul>
+		<div class="bottom">
+			<span class="total">3 items left</span>
+			<a href="#" class="clear">Clear completed</a>
+			<ol>
+				<li><a href="#">All</a></li>
+				<li><a href="#">Active</a></li>
+				<li><a href="#">Completed</a></li>
+			</ol>
+		</div>
+	</div>
+	<div class="sub">
+		<div></div>
+		<div></div>
+	</div>
+</section>
+
+
+<style>
+section .sub div {
+	height: 4px;
+	border: 1px solid #cecece;
+	border-top: 0 solid;
+	background: #f6f6f6;
+}
+section .sub div:first-child {
+	margin: 0 3px;
+}
+section .sub div:last-child {
+	margin: 0 6px;
+}
+
+
+
+
+
+
+
+
+
+
+section .page .bottom {
+	font-size: 12px;
+	color: #898989;
+	padding: 15px;
+}
+
+	section .page .bottom .total {
+		float: left;
+	}
+	section .page .bottom .clear {
+		float: right;
+	}
+	section .page .bottom ol {
+		display: block;
+		text-align: center;
+		margin: 0;
+	}
+		section .page .bottom ol li {
+			display: inline-block;
+			margin: 0 4px;
+		}
+			section .page .bottom ol li a {
+				padding: 7px 8px;
+				border: 1px solid #fff;
+				border-radius: 3px;
+			}
+			section .page .bottom ol li a:hover {
+				border-color: #efd5d6;
+			}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+body {
+	background-color: #f5f5f5;
+	font-family: Verdana;
+	font-size: 23px;
+	margin: 0;
+}
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+
+section {
+	margin: 0 auto;
+	max-width: 550px;
+}
+
+	section h1 {
+		text-align: center;
+		margin: 26px 0;
+
+		font-family: Raleway, sans-serif;
+		font-size: 73px;
+		font-width: 100;
+		color: #ead7d8;
+	}
+
+	section .page {
+		background-color: #fff;
+		border: 1px solid #cecece;
+		box-shadow: 0 10px 50px #cdcdcd;
+	}
+
+		section .page .title {
+			color: #d9d9d9;
+			font-style: italic;
+		}
+			section .page .title .caret {
+				display: inline-block;
+				vertical-align: middle;
+				width: 34px;
+				height: 34px;
+				margin: 13px 21px 13px 7px;
+
+				background: url(img/caret.png) center center no-repeat;
+			}
+			section .page .title span {
+				display: inline-block;
+				vertical-align: middle;
+			}
+
+		section .page ul {
+			margin: 0;
+			padding: 0;
+			border-top: 2px solid #aaa;
+		}
+			section .page ul li {
+				display: block;
+				border-bottom: 1px solid #aaa;
+			}
+
+				section .page ul li a.check {
+					display: inline-block;
+					vertical-align: middle;
+					width: 32px;
+					height: 32px;
+					margin: 13px 21px 13px 7px;
+
+					border: 1px solid #ddd; /* #efefef */
+					border-radius: 50%;
+				}
+				section .page ul li.done a.check {
+					background: url(img/check.png) center center no-repeat;
+				}
+	
+				section .page ul li span {
+					display: inline-block;
+					vertical-align: middle;
+				}
+				section .page ul li.done span {
+					text-decoration: line-through;
+					color: #d9d9d9;
+				}
+	
+				section .page ul li a.del {
+				}
+				section .page ul li:hover a.del {
+					float: right;
+					margin: 24px 24px 0 0;
+					width: 15px;
+					height: 15px;
+					background: url(img/delete.png) center center no-repeat;
+				}
+
+			section .page ul li.add {
+				padding-left: 50px;
+			}
+				section .page ul li input {
+					display: block;
+					width: 100%;
+					box-sizing: border-box;
+					
+					font-size: inherit;
+					padding: 20px 18px;
+				}
+
+</style>
+
+
+</body></html>
