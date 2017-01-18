@@ -3,51 +3,119 @@
 	<meta charset="UTF-8">
 	<title>TODO</title>
 	<link rel="stylesheet" href="style.css">
-	<link href="https://fonts.googleapis.com/css?family=Roboto:100,300" rel="stylesheet">
-</head><body>
-
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:100&amp;subset=latin-ext">
+</head>
+<body>
 
 <section>
 	<h1>todos</h1>
 	<div class="page">
-		<div class="title">
-			<div class="caret"></div>
-			<span>What needs to be done?</span>
+		<div class="first-line">
+			<button class="caret"></button>
+			<input type="text" placeholder="What needs to be done?">
 		</div>
-		<ul>
-			<li>
-				<a href="#" class="check"></a>
-				<span>Buy milk</span>
-				<a href="#" class="del"></a>
-			</li>
-			<li class="done">
-				<a href="#" class="check"></a>
-				<span>Prepare the report</span>
-				<a href="#" class="del"></a>
-			</li>
-			<li>
-				<a href="#" class="check"></a>
-				<span>Call Mr. Smyth</span>
-				<a href="#" class="del"></a>
-			</li>
-			<li class="add">
-				<input type="text" value="Pick up dress from the dry cleaner">
-			</li>
-		</ul>
+
+		<div class="rounded">
+      		<input type="checkbox" value="1" name="check" id="rounded1" />
+    		<label for="rounded1">Buy milk</label>
+    		<button class="del"><button>
+    	</div>
+    	
+    	<div class="rounded">
+      		<input type="checkbox" value="1" name="check" id="rounded2" />
+    		<label for="rounded2">Prepare the report</label>
+    		<button class="del"><button>
+    	</div>
+    	
+    	<div class="rounded">
+      		<input type="checkbox" value="1" name="check" id="rounded3" />
+    		<label for="rounded3">Call Mr. Smyth</label>
+    		<button class="del"><button>
+    	</div>
+    	
+   		<div class="editable">
+			<div contenteditable="true" class="edit">
+ 					Pick up dress from the dry cleaner
+			</div>
+		</div>
+		
 		<div class="bottom">
-			<span class="total">3 items left</span>
-			<a href="#" class="clear">Clear completed</a>
-			<ol>
-				<li><a href="#">All</a></li>
-				<li><a href="#">Active</a></li>
-				<li><a href="#">Completed</a></li>
-			</ol>
+			<span >3 items left</span>
+			<div>
+				<button class="active">All</button>
+				<button>Active</button>
+				<button>Completed</button>
+			</div>
+			<button>Clear completed</button>
 		</div>
 	</div>
+	
 	<div class="sub">
 		<div></div>
 		<div></div>
 	</div>
+	
 </section>
 
-</body></html>
+</body>
+</html><!DOCTYPE html>
+<html><head>
+	<meta charset="UTF-8">
+	<title>TODO</title>
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:100&amp;subset=latin-ext">
+</head>
+<body>
+
+<section>
+	<h1>todos</h1>
+	<div class="page">
+		<div class="first-line">
+			<button class="caret"></button>
+			<input type="text" placeholder="What needs to be done?">
+		</div>
+
+		<div class="rounded">
+      		<input type="checkbox" value="1" name="check" id="rounded1" />
+    		<label for="rounded1">Buy milk</label>
+    		<button class="del"><button>
+    	</div>
+    	
+    	<div class="rounded">
+      		<input type="checkbox" value="1" name="check" id="rounded2" />
+    		<label for="rounded2">Prepare the report</label>
+    		<button class="del"><button>
+    	</div>
+    	
+    	<div class="rounded">
+      		<input type="checkbox" value="1" name="check" id="rounded3" />
+    		<label for="rounded3">Call Mr. Smyth</label>
+    		<button class="del"><button>
+    	</div>
+    	
+   		<div class="editable">
+			<div contenteditable="true" class="edit">
+ 					Pick up dress from the dry cleaner
+			</div>
+		</div>
+		
+		<div class="bottom">
+			<span >3 items left</span>
+			<div>
+				<button class="active">All</button>
+				<button>Active</button>
+				<button>Completed</button>
+			</div>
+			<button>Clear completed</button>
+		</div>
+	</div>
+	
+	<div class="sub">
+		<div></div>
+		<div></div>
+	</div>
+	
+</section>
+
+</body>
+</html>
