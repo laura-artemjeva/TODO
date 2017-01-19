@@ -1,5 +1,24 @@
 @CHARSET "UTF-8";
 
+::-webkit-input-placeholder {
+	color: #d9d9d9;
+	font-style: italic;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+	color: #d9d9d9;
+	font-style: italic;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+	color: #d9d9d9;
+	font-style: italic;
+}
+
+:-ms-input-placeholder {  
+	color: #d9d9d9;
+	font-style: italic; 
+}
 
 body {
 	background-color: #f5f5f5;
@@ -7,71 +26,103 @@ body {
 	font-size: 23px;
 	margin: 0;
 	color: #4d4d4d;
-
-}
+	}
 
 section {
 	margin: 0 auto;
 	max-width: 550px;
-}
+	}
 
 h1 {
-		text-align: center;
-		margin: 26px 0;
-		font-family: Raleway, sans-serif;
-		font-size: 100px;
-		font-weight: 100;
-		color: #ead7d8;
+	text-align: center;
+	margin: 26px 0;
+	font-family: Raleway, sans-serif;
+	font-size: 100px;
+	font-weight: 100;
+	color: #ead7d8;
 	}
 
 button,
 input,
 div[contenteditable="true"] {
 	outline: 0;
-}
+	}
 
 	.page {
 		background-color: #fff;
 		border: 1px solid #cecece;
-		box-shadow: 0 10px 50px #cdcdcd;
-	}
+		box-shadow: 0 0px 30px #cdcdcd;
+		position: relative;
+		}
+		
+	.page::after{
+	  content: "";
+	  display: block;
+	  height: 13px;
+	  position: absolute;
+	  left: 3px;
+	  right: 3px;
+	  bottom: -7px;
+	  z-index:-1;
+	  border: 1px solid #bbb;
+	  background-color: #fff;
+	  box-shadow: 0 10px 0 -5px #f6f6f6, 0 10px 0 -4px #bbb, 0 5px 40px #cdcdcd;
+	  }
 
 		.first-line {
-			color: #d9d9d9;
-			font-style: italic;
 			border-bottom: 2px solid #e6e6e6;
-		}
+			}
+			
+			
 			.caret {
 				display: inline-block;
 				vertical-align: middle;
-				width: 34px;
-				height: 34px;
-				margin: 13px 21px 13px 7px;
+				width: 32px;
+				height: 32px;
+				margin: 0 3px 0 8px;
 				background: url(img/caret.png) center center no-repeat;
-			}
+				}
 			input {
 				display: inline-block;
 				vertical-align: middle;
 				font: inherit;
 				color: inherit;
 				border: none;
-			}
+				width: 460px;
+				}
+			.new-task {
+				padding-left: 18px;
 
-		.rounded {
-			padding: 20px 0 15px 0;
+				}	
+				
+				
+				input,
+				.task-container {
+				padding: 20px 0 15px 0;
+				border: 1px solid transparent;
+				}
+				
+
+		.task-row {
 			border-bottom: 1px solid #ededed;
 			display: flex;
 			align-items: center;
-		}	
-			.rounded input {
+			}	
+			.task-row input {
 				display: none;
-				
-			}
-				.rounded label {
-					flex:1;
 				}
-
-						.rounded label:before {
+				
+				.task-container {
+				flex: 1;
+				display:inline-block;
+				padding-left: 18px;
+				}
+				
+					.hidden {
+					display:none;
+					}
+				
+					.task-row label:before {
 						content: '';
 						display: inline-block;
 						vertical-align: middle;
@@ -79,53 +130,50 @@ div[contenteditable="true"] {
 						height: 32px;
 						border: 1px solid #efefef;
 						border-radius: 50%;
-						margin: 0 22px 0 7px;
-					}
-					.rounded input:checked + label {
+						margin: 0 2px 0 7px;
+						cursor: pointer;
+						}
+					.task-row input:checked + label + .task-container {
 						text-decoration: line-through;
 						color: #d9d9d9;
-					}
-					.rounded input:checked + label:before {
+						}
+					.task-row input:checked + label:before {
 						background: url(img/check.png) center center no-repeat;
-					}
-				
-					.rounded:hover button.del  {
-
-						vertical-align: middle;
-						margin-right: 24px;
+						}
+					
+					button.del {
+						margin-right: 23px;
+						}
+					.task-row:hover button.del  {
 						width: 15px;
 						height: 15px;
 						background: url(img/delete.png) center center no-repeat;
 						cursor: pointer;
-					}
+						}
 
-		.editable {
-			padding-left: 50px;
-			border-bottom: 1px solid #ededed;
-		}
 			.edit {
-				display: block;
-				width: 99.8%;
+				display: inline-block;
+				margin-right: 1px;
 				box-sizing: border-box;
 				box-shadow: inset 0px 0px 6px 3px #ededed;
-				border: 0.5px solid #999999;
+				border: 1px solid #999999;
 				font-size: inherit;
-				padding: 20px 18px;
-			}
+				padding-left: 18px;
+				margin-left: 43px;
+				}
 			
-		.bottom {
+		.footer {
 			font-size: 12px;
 			color: #898989;
 			padding: 7px;
 			display: flex;
 			justify-content: space-between;
 			align-items: center;
-		}
-			.bottom div {
-				display: inline-block;
-				text-align: center;
-				margin: 0;
 			}
+			.footer div {
+				display: inline-block;
+				margin: 0;
+				}
 				button {
 					padding: 7px 8px;
 					border: 1px solid #fff;
@@ -134,23 +182,15 @@ div[contenteditable="true"] {
 					font: inherit;
 					color: inherit;
 					cursor: pointer;
-				}
-				.active {
+					}
+					
+				.active,
+				.button-all:hover,
+				.button-active:hover,
+				.button-completed:hover,
+				.button-clear:hover {
 					border-color: #efd5d6;
-				}			
-
-section .sub div {
-	height: 4px;
-	border: 1px solid #cecece;
-	border-top: 0 solid;
-	background: #f6f6f6;
-}
-	section .sub div:first-child {
-		margin: 0 3px;
-	}
-	section .sub div:last-child {
-		margin: 0 6px;
-	}
+					}			
 
 
 
