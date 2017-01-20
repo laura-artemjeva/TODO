@@ -3,22 +3,22 @@
 ::-webkit-input-placeholder {
 	color: #d9d9d9;
 	font-style: italic;
-}
+	}
 
 :-moz-placeholder { /* Firefox 18- */
 	color: #d9d9d9;
 	font-style: italic;
-}
+	}
 
 ::-moz-placeholder {  /* Firefox 19+ */
 	color: #d9d9d9;
 	font-style: italic;
-}
+	}
 
 :-ms-input-placeholder {  
 	color: #d9d9d9;
 	font-style: italic; 
-}
+	}
 
 body {
 	background-color: #f5f5f5;
@@ -54,7 +54,7 @@ div[contenteditable="true"] {
 		box-shadow: 0 0px 30px #cdcdcd;
 		position: relative;
 		}
-		
+
 	.page::after{
 	  content: "";
 	  display: block;
@@ -72,8 +72,7 @@ div[contenteditable="true"] {
 		.first-line {
 			border-bottom: 2px solid #e6e6e6;
 			}
-			
-			
+
 			.caret {
 				display: inline-block;
 				vertical-align: middle;
@@ -82,6 +81,7 @@ div[contenteditable="true"] {
 				margin: 0 3px 0 8px;
 				background: url(img/caret.png) center center no-repeat;
 				}
+
 			input {
 				display: inline-block;
 				vertical-align: middle;
@@ -90,38 +90,37 @@ div[contenteditable="true"] {
 				border: none;
 				width: 460px;
 				}
+
 			.new-task {
 				padding-left: 18px;
-
 				}	
-				
-				
+
 				input,
 				.task-container {
 				padding: 20px 0 15px 0;
 				border: 1px solid transparent;
 				}
-				
 
 		.task-row {
 			border-bottom: 1px solid #ededed;
 			display: flex;
 			align-items: center;
 			}	
+
 			.task-row input {
 				display: none;
 				}
-				
+
 				.task-container {
 				flex: 1;
 				display:inline-block;
 				padding-left: 18px;
 				}
-				
+
 					.hidden {
 					display:none;
 					}
-				
+
 					.task-row label:before {
 						content: '';
 						display: inline-block;
@@ -133,17 +132,20 @@ div[contenteditable="true"] {
 						margin: 0 2px 0 7px;
 						cursor: pointer;
 						}
+
 					.task-row input:checked + label + .task-container {
 						text-decoration: line-through;
 						color: #d9d9d9;
 						}
+
 					.task-row input:checked + label:before {
 						background: url(img/check.png) center center no-repeat;
 						}
-					
+
 					button.del {
 						margin-right: 23px;
 						}
+
 					.task-row:hover button.del  {
 						width: 15px;
 						height: 15px;
@@ -161,7 +163,7 @@ div[contenteditable="true"] {
 				padding-left: 18px;
 				margin-left: 43px;
 				}
-			
+
 		.footer {
 			font-size: 12px;
 			color: #898989;
@@ -170,10 +172,12 @@ div[contenteditable="true"] {
 			justify-content: space-between;
 			align-items: center;
 			}
+
 			.footer div {
 				display: inline-block;
 				margin: 0;
 				}
+
 				button {
 					padding: 7px 8px;
 					border: 1px solid #fff;
@@ -183,7 +187,7 @@ div[contenteditable="true"] {
 					color: inherit;
 					cursor: pointer;
 					}
-					
+
 				.active,
 				.button-all:hover,
 				.button-active:hover,
