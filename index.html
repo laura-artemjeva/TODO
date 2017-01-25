@@ -2,65 +2,66 @@
 <html><head>
 	<meta charset="UTF-8">
 	<title>TODO</title>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&amp;subset=latin-ext">
 	<link rel="stylesheet" href="style.css">
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:100&amp;subset=latin-ext">
 </head>
 <body>
 
 <section>
 	<h1>todos</h1>
 	<div class="page">
-		<div class="first-line">
-			<button class="caret"></button><!--
-			--><input type="text" placeholder="What needs to be done?" class="new-task">
+		<div class="new-task-row">
+			<button class="caret"></button>
+			<input type="text" placeholder="What needs to be done?" class="new-task">
 		</div>
 
-		<div class=task-row>
-      		<input type="checkbox" value="1" name="check" id="task1"/>
-    		<label for="task1"></label>
-    		<div class="task-container">
-    			Buy milk
+		<div class="tasks">
+			<div class=task-row>
+	      		<input type="checkbox" value="1" name="check" id="task1"/>
+	    		<label for="task1"></label>
+	    		<div class="task-container">
+	    			Buy milk
+		    	</div>
+	    		<button class="del"></button>
 	    	</div>
-    		<button class="del"></button>
-    	</div>
 
-    	<div class="task-row">
-      		<input type="checkbox" value="1" name="check" id="task2"/>
-    		<label for="task2"></label>
-			<div class="task-container">
-    			Prepare the report
-    		</div>
-    		<button class="del"></button>
-    	</div>
+	    	<div class="task-row">
+	      		<input type="checkbox" value="1" name="check" id="task2"/>
+	    		<label for="task2"></label>
+				<div class="task-container">
+	    			Prepare the report
+	    		</div>
+	    		<button class="del"></button>
+	    	</div>
 
-    	<div class="task-row">
-      		<input type="checkbox" value="1" name="check" id="task3"/>
-    		<label for="task3"></label>
-    		<div class="task-container">
-    			Call Mr. Smyth
-    		</div>
-    		<button class="del"></button>
-    	</div>
+	    	<div class="task-row">
+	      		<input type="checkbox" value="1" name="check" id="task3"/>
+	    		<label for="task3"></label>
+	    		<div class="task-container">
+	    			Call Mr. Smyth
+	    		</div>
+	    		<button class="del"></button>
+	    	</div>
 
-   		<div class="task-row">
-      		<input type="checkbox" value="1" name="check" id="task4"/>
-    		<label for="task4" class="hidden"></label>
-    		<div contenteditable="true" class="task-container edit">
- 				Pick up dress from the dry cleaner
-			</div>
-    		<button class="del hidden"></button>
-    	</div>
+	   		<div class="task-row">
+	      		<input type="checkbox" value="1" name="check" id="task4"/>
+	    		<label for="task4" class="hidden"></label>
+	    		<div contenteditable="true" class="task-container edit">
+	 				Pick up dress from the dry cleaner
+				</div>
+	    		<button class="del deleted"></button>
+	    	</div>
+		</div>
 
   		<div class="footer">
 			<span class="remaining-items">3 items left</span> 
-			<div>
-				<button class="active button-all">All</button>
-				<button class="button-active">Active</button>
-				<button class="button-completed">Completed</button>
+			<div class="selection-buttons">
+				<button class="active" data-type="all">All</button>
+				<button data-type="active">Active</button>
+				<button data-type="completed">Completed</button>
 			</div>
 			<button class="button-clear">Clear completed</button>
 		</div>
 	</div>
 
 </section>
-
